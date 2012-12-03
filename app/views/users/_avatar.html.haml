@@ -1,0 +1,10 @@
+- form_tag({:action => 'save_avatar', :id => @user}, :multipart => true) do
+  %fieldset.box.tabular
+    %legend= l(:label_avatar)
+    %div{:style=>"width: 128px; height: 128px; border: 1px silver solid;"}
+      = avatar_with_local(@user, :size => "128")
+    %br
+    = file_field_tag "avatar"
+    %em.info= l(:text_avatar_help)
+  = submit_tag l(:button_save)  
+  = submit_tag l(:button_delete), :data => {:confirm => l(:are_you_sure_delete_avatar)} if @user.avatar_id

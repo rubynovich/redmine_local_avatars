@@ -1,0 +1,12 @@
+# English strings go here
+en:
+  label_avatar: "Avatar"
+  message_avatar_uploaded: "Avatar uploaded successfully"
+  button_change_avatar:  "Change local avatar"
+  are_you_sure_delete_avatar: "Are you sure you want to delete your avatar?"
+  avatar_deleted:  "Avatar deleted"
+  unable_to_delete_avatar:  "Sorry.  There was an error deleting the avatar"
+  text_avatar_help: "You can upload any size images (*.jpg, *.png). Make sure that your image has 1:1 aspect ratio or it may be distorted."
+  error_saving_avatar: "Error saving avatar"
+  error_uploaded_file_is_not_image: "Uploaded file is not an image"
+  error_file_not_uploaded: "Avatar is not uploaded"

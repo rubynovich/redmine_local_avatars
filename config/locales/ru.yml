@@ -1,0 +1,12 @@
+# English strings go here
+ru:
+  label_avatar: "Аватар"
+  message_avatar_uploaded: "Аватар успешно загружен."
+  button_change_avatar:  "Изменить аватар"
+  are_you_sure_delete_avatar: "Вы уверены, что хотите удалить аватар?"
+  avatar_deleted:  "Аватар успешно удален."
+  unable_to_delete_avatar:  "Ошибка удаления аватара."
+  text_avatar_help: "Можно загружать изображения (*.jpg, *.png) любого размерa. Следите за тем, чтобы пропорции загружаемого изображения были 1:1, иначе возможны искажения."
+  error_saving_avatar: "Ошибка загрузки аватара"
+  error_uploaded_file_is_not_image: "Загруженный файл не является изображением"
+  error_file_not_uploaded: "Аватар не загружен"
