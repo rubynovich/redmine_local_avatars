@@ -1,5 +1,5 @@
 require 'redmine'
-require 'redmine_local_avatars/hooks'
+#require 'redmine_local_avatars/hooks'
 require 'redmine_local_avatars/local_avatars'
 
 if Rails::VERSION::MAJOR < 3
@@ -10,15 +10,20 @@ else
 end
 
 object_to_prepare.to_prepare do
-  [ :account_controller, :application_helper, :my_controller, 
-    :user, :users_controller, :users_helper].each do |cl|
+  [ 
+#    :account_controller, 
+    :application_helper, 
+#    :my_controller, 
+    :user, 
+    :users_controller, 
+    :users_helper].each do |cl|
     require "local_avatars_#{cl}_patch"
   end
 
   [ 
-    [AccountController, LocalAvatarsPlugin::AccountControllerPatch],
+#    [AccountController, LocalAvatarsPlugin::AccountControllerPatch],
     [ApplicationHelper, LocalAvatarsPlugin::ApplicationHelperPatch],
-    [MyController, LocalAvatarsPlugin::MyControllerPatch],
+#    [MyController, LocalAvatarsPlugin::MyControllerPatch],
     [User, LocalAvatarsPlugin::UserPatch],     
     [UsersController, LocalAvatarsPlugin::UsersControllerPatch],
     [UsersHelper, LocalAvatarsPlugin::UsersHelperPatch]
@@ -28,8 +33,8 @@ object_to_prepare.to_prepare do
 end
 
 Redmine::Plugin.register :redmine_local_avatars do
-  name 'Redmine Local Avatars plugin'
-  author 'Andrew Chaika and Luca Pireddu'
-  description 'This plugin lets users upload avatars directly into Redmine'
-  version '0.2.0'
+  name 'Загрузка персонального аватара'
+  author 'Roman Shipiev'
+  description 'Позволяет из интерфейса администрирования пользователей добавлять аватарки'
+  version '0.0.2'
 end

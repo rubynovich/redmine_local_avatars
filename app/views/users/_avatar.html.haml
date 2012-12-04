@@ -2,7 +2,7 @@
   %fieldset.box.tabular
     %legend= l(:label_avatar)
     %div{:style=>"width: 128px; height: 128px; border: 1px silver solid;"}
-      = avatar_with_local(@user, :size => "128")
+      = avatar(@user, :size => "128")
     %br
     = file_field_tag "avatar"
     %em.info= l(:text_avatar_help)
