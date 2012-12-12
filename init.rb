@@ -11,7 +11,7 @@ end
 
 object_to_prepare.to_prepare do
   [ 
-#    :account_controller, 
+    :account_controller, 
     :application_helper, 
 #    :my_controller, 
     :user, 
@@ -21,7 +21,7 @@ object_to_prepare.to_prepare do
   end
 
   [ 
-#    [AccountController, LocalAvatarsPlugin::AccountControllerPatch],
+    [AccountController, LocalAvatarsPlugin::AccountControllerPatch],
     [ApplicationHelper, LocalAvatarsPlugin::ApplicationHelperPatch],
 #    [MyController, LocalAvatarsPlugin::MyControllerPatch],
     [User, LocalAvatarsPlugin::UserPatch],     
