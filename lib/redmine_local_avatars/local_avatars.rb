@@ -4,6 +4,7 @@ module LocalAvatarsPlugin
       expires_in 1.month
       av = user.avatar
       if av && thumbnail = av.diskfile
+        thumbnail = av.thumbnail(:size => params[:size]) if Rails::VERSION::MAJOR >= 3 && Redmine::Thumbnail.convert_available?
         send_file(thumbnail, :filename => filename_for_content_disposition(av.filename),
                   :type => av.content_type,
                   :disposition => (av.image? ? 'inline' : 'attachment'))
