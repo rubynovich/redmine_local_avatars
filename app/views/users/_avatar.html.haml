@@ -8,4 +8,4 @@
     %em.info= l(:text_avatar_help)
   = submit_tag l(:button_save)
   = submit_tag l(:button_delete), :data => {:confirm => l(:are_you_sure_delete_avatar)} if @user.avatar_id
-= form if if Rails::VERSION::MAJOR >= 3
+= form if Rails::VERSION::MAJOR >= 3
